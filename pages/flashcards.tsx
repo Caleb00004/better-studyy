@@ -32,7 +32,7 @@ const Flashcards = () => {
                 </div>
                 <div className={`flex ${displayFlex ? "flex-row" : "flex-col"} flex-wrap gap-4 justify-center items-center mt-[2.5em]`}>
                     {flashCards?.map(item => <FlashCardItem data={item} />)}
-                    <div className=" bg-rose-400 flex flex-col w-[25em] h-[18em] p-4 flex-shrink-0 ">
+                    {/* <div className=" bg-rose-400 flex flex-col w-[25em] h-[18em] p-4 flex-shrink-0 ">
                         <h3 className="font-bold text-[1.3em]">Biology</h3>
                         <p className="text-[0.9em] overflow-y-scroll">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex magnam distinctio iure, 
@@ -67,7 +67,7 @@ const Flashcards = () => {
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex magnam distinctio iure, 
                             laudantium odit molestiae nihil quos expedita nesciunt? Recusandae aliquid eligendi laudantium, pariatur omnis dicta ipsa sint fugiat?
                         </p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </Layout>
