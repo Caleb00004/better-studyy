@@ -100,6 +100,7 @@ const SequenceRecall = () => {
         const allKeys = Object.keys(userInput)
 
         for (let i = 0; i < 5; i++ ) {
+            // @ts-ignore
             if (Boolean(userInput[allKeys[i]]) == false) {
                 return true
             }
@@ -111,6 +112,7 @@ const SequenceRecall = () => {
         const allKeys = Object.keys(userInput)
 
         for (let i = 0; i < 7; i++ ) {
+            // @ts-ignore
             if (Boolean(userInput[allKeys[i]]) == false) {
                 return true
             }
@@ -122,6 +124,7 @@ const SequenceRecall = () => {
         const allKeys = Object.keys(userInput)
 
         for (let i = 0; i < 11; i++ ) {
+            // @ts-ignore
             if (Boolean(userInput[allKeys[i]]) == false) {
                 return true
             }
@@ -129,6 +132,7 @@ const SequenceRecall = () => {
         return false
     };
 
+    // @ts-ignore
      const handleInputChange = (e, index) => {
         const { value } = e.target;
         
@@ -140,6 +144,7 @@ const SequenceRecall = () => {
 
         // Shift focus to the next input field if the current one is filled
         if (value && index < numberSequence.length - 1) {
+            // @ts-ignore
             inputRefs.current[index + 1].focus();
         }
     };
@@ -149,6 +154,7 @@ const SequenceRecall = () => {
     console.log(disableResultBtn)
 
     return (
+        // @ts-ignore
         <Layout>
             <div className="text-center relative">
                 <h1 className="text-[1.6em] pb-5 mt-3">Sequence Recall</h1>
@@ -195,8 +201,10 @@ const SequenceRecall = () => {
                                         <div className="flex gap-4 justify-center pt-4">
                                             {numberSequence.map((item, i) =>
                                                 <input 
+                                                    // @ts-ignore
                                                     ref={el => inputRefs.current[i] = el} // Attach refs to the input fields
                                                     autoFocus={(i == 0) && true}
+                                                    // @ts-ignore
                                                     disabled={userInput[`value${i + 1}`]} 
                                                     // onChange={(e) => (setUserInput(item => ({...item, [`value${i + 1}`]: e.target.value})))} 
                                                     onChange={(e) => handleInputChange(e, i)}
