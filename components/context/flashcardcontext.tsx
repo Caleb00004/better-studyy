@@ -25,6 +25,7 @@ function ContextProvider({children}: {children: ReactNode}) {
     const createFlashCard = (e: ChangeEvent<HTMLInputElement>) => {
         e.preventDefault()
         const data = localStorage.getItem("flashcards")
+        // @ts-ignore
         const flashCards = JSON.parse(data)
 
         flashCards && localStorage.setItem("flashcards", JSON.stringify([...flashCards, details]))
@@ -50,6 +51,7 @@ function ContextProvider({children}: {children: ReactNode}) {
     }
 
     return (
+        // @ts-ignore
         <appContext.Provider value={contextValue} >{children}</appContext.Provider>
     )
 }

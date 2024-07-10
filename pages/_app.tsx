@@ -22,11 +22,13 @@ export default function App({ Component, pageProps }: AppProps) {
 
 	return (
 		<>
+		{/* @ts-ignore */}
 			<Script
 				strategy='afterInteractive'
 				src={`https://www.googletagmanager.com/gtag/js?id=G-M48YDC11FD`}
 				id='interactive1'
 			/>
+					{/* @ts-ignore */}
 			<Script
 				id='interactive2'
 				strategy='afterInteractive'
@@ -39,7 +41,9 @@ export default function App({ Component, pageProps }: AppProps) {
 						`,
 				}}
 			/>
+					{/* @ts-ignore */}
 			<ContextProvider>
+						{/* @ts-ignore */}
 				<Component {...pageProps} />
 			</ContextProvider>
 		</>

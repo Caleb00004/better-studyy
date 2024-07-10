@@ -143,6 +143,7 @@ const DisplayResult = ({ data }: Props) => {
 						<div
 							className='center cursor-pointer text-fsm'
 							onClick={copyToClipboard}>
+								{/* @ts-ignore */}
 							<Icon icon='bxs:copy' color='#D9DDE0' width='25' height='25' />
 							Copy
 						</div>
@@ -175,6 +176,7 @@ const DisplayResult = ({ data }: Props) => {
 				</div>
 			</section>
 			{errorMessage.state && (
+				// @ts-ignore
 				<ErrorBox message={errorMessage.message} onClose={onClose} />
 			)}
 		</>
