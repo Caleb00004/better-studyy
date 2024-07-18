@@ -1,6 +1,5 @@
 import { Icon } from '@iconify/react';
 import { useEffect, useState } from 'react';
-import { Configuration, OpenAIApi } from 'openai';
 import ErrorBox from './ErrorBox';
 
 type Props = { 
@@ -78,32 +77,6 @@ const DisplayResult = ({ data }: Props) => {
 					console.error(error);
 				});
 
-
-			// try {
-			// 	const prompt = selection + data.note;
-			// 	const response = await openai.createCompletion({
-			// 		model: 'gpt-4o',
-			// 		prompt: prompt,
-			// 		max_tokens: 1024,
-			// 		temperature: 0,
-			// 		top_p: 1,
-			// 		frequency_penalty: 0,
-			// 		presence_penalty: 0,
-			// 	});
-
-			// 	if (!response.data.choices[0].text) throw Error('No result');
-			// 	window.localStorage.setItem('note', JSON.stringify(data));
-			// 	const result = response.data.choices[0].text.replace(/:\n/g, '').trim();
-
-			// 	if (result.length === 0) throw Error('No result');
-			// 	setResult(result);
-			// 	window.localStorage.setItem('result', result);
-			// 	setIsLoading(false);
-			// } catch (err) {
-			// 	setIsLoading(false);
-			// 	setErrorMessage({ state: true, message: 'Oops! Something went wrong' });
-			// 	console.error(err);
-			// }
 		};
 
 		if (JSON.stringify(data) === window.localStorage.getItem('note')) {
